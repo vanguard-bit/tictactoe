@@ -61,6 +61,121 @@ void intro(int xyz[5][2][3],char **grid,int mode){
   move(y,x);
 }
 int intro_animation(int xyz[5][2][3],char **grid){
+  char *text[8][11];
+  int arr[9]={1,2,3,0,5,4,1,6,7};
+
+  // printf("\033[1;1H\e[2J");
+text[0][0]="OOOOOOOOOOOOOOOO";
+text[0][1]="       O        ";
+text[0][2]="       O        ";
+text[0][3]="       O        ";
+text[0][4]="       O        ";
+text[0][5]="       O        ";
+text[0][6]="       O        ";
+text[0][7]="       O        ";
+text[0][8]="       O        ";
+text[0][9]="       O        ";
+text[0][10]="       O        ";
+
+text[1][0]="XXXXXXXXXXXXXXXX";
+text[1][1]="       X        ";
+text[1][2]="       X        ";
+text[1][3]="       X        ";
+text[1][4]="       X        ";
+text[1][5]="       X        ";
+text[1][6]="       X        ";
+text[1][7]="       X        ";
+text[1][8]="       X        ";
+text[1][9]="       X        ";
+text[1][10]="       X        ";
+
+text[2][0]="XXXXXXXXXXXXXXXX";
+text[2][1]="       X        ";
+text[2][2]="       X        ";
+text[2][3]="       X        ";
+text[2][4]="       X        ";
+text[2][5]="       X        ";
+text[2][6]="       X        ";
+text[2][7]="       X        ";
+text[2][8]="       X        ";
+text[2][9]="       X        ";
+text[2][10]="XXXXXXXXXXXXXXXX";
+
+text[3][0]=" OOOOOOOOOOOOOOO";
+text[3][1]="O               ";
+text[3][2]="O               ";
+text[3][3]="O               ";
+text[3][4]="O               ";
+text[3][5]="O               ";
+text[3][6]="O               ";
+text[3][7]="O               ";
+text[3][8]="O               ";
+text[3][9]="O               ";
+text[3][10]=" OOOOOOOOOOOOOOO";
+
+text[4][0]=" XXXXXXXXXXXXXXX";
+text[4][1]="X               ";
+text[4][2]="X               ";
+text[4][3]="X               ";
+text[4][4]="X               ";
+text[4][5]="X               ";
+text[4][6]="X               ";
+text[4][7]="X               ";
+text[4][8]="X               ";
+text[4][9]="X               ";
+text[4][10]=" XXXXXXXXXXXXXXX";
+
+text[5][0]="    OOOOOOOO    ";
+text[5][1]="   O        O   ";
+text[5][2]="  O          O  ";
+text[5][3]=" O            O ";
+text[5][4]="O              O";
+text[5][5]="O              O";
+text[5][6]="OOOOOOOOOOOOOOOO";
+text[5][7]="O              O";
+text[5][8]="O              O";
+text[5][9]="O              O";
+text[5][10]="O              O";
+
+text[6][0]=" OOOOOOOOOOOOOO ";
+text[6][1]="O              O";
+text[6][2]="O              O";
+text[6][3]="O              O";
+text[6][4]="O              O";
+text[6][5]="O              O";
+text[6][6]="O              O";
+text[6][7]="O              O";
+text[6][8]="O              O";
+text[6][9]="O              O";
+text[6][10]=" OOOOOOOOOOOOOO ";
+
+text[7][0]="XXXXXXXXXXXXXXXX";
+text[7][1]="X               ";
+text[7][2]="X               ";
+text[7][3]="X               ";
+text[7][4]="X               ";
+text[7][5]="XXXXXXXXXXXXXXXX";
+text[7][6]="X               ";
+text[7][7]="X               ";
+text[7][8]="X               ";
+text[7][9]="X               ";
+text[7][10]="XXXXXXXXXXXXXXXX";
+
+printf("\033[1;1H\e[2J\e[032;031m");
+for(int i=0;i<9;i++){
+  for(int j=0;j<11;j++){
+    printf("\033[%d;%dH",((LINES-10)/2)+j,((COLS-152)/2)+(i*17));
+     printf("%s",text[arr[i]][j]); 
+  }
+    // printf("\033[%d;%dH",0,17*i);
+  }
+napms(3400);
+nodelay(stdscr, TRUE);
+  move(xyz[1][0][1],xyz[1][1][1]);
+char aa=getch();
+nodelay(stdscr, FALSE);
+  printf("\e[0m");
+
   move(xyz[1][0][1],xyz[1][1][1]);
   intro(xyz,grid,1);
   int pos=0;
