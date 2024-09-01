@@ -1,6 +1,6 @@
 #pragma once
 #include <stdio.h>
-#include <conio.h>
+// #include <conio.h>
 #include <stdlib.h>
 #include "ncurses/include/ncursesw/ncurses.h"
 #define  GRID_LENTH 11

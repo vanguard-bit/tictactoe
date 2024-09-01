@@ -171,87 +171,87 @@ for(int i=0;i<9;i++){
   }
 napms(3400);
 nodelay(stdscr, TRUE);
-  move(xyz[1][0][1],xyz[1][1][1]);
-char aa=getch();
-nodelay(stdscr, FALSE);
+  // move(xyz[1][0][1],xyz[1][1][1]);
+// char aa=getch();
+// nodelay(stdscr, FALSE);
   printf("\e[0m");
 
   move(xyz[1][0][1],xyz[1][1][1]);
   intro(xyz,grid,1);
   int pos=0;
-  while(!_kbhit()){
-    if(_kbhit()) break;
+  while(getch() == ERR){
+    if(getch() != ERR) break;
     int _pos[]={0,4,2,3,1};
      pos=0;
     while(pos<4){
       for(int i=0;i<3;i++){
         for(int j=0;j<3;j++){
-          if(_kbhit()) break;
+          if(getch() != ERR) break;
           if(pos==0 && i==j && i!=0){
-            if(_kbhit()) break;
+            if(getch() != ERR) break;
             refresh();
             move(xyz[_pos[pos]][0][i],xyz[_pos[pos]][1][j]);
-          if(_kbhit()) break;
+          if(getch() != ERR) break;
             refresh();
-            napms(35);
+            napms(47);
           }
           if(pos==1 && i==j && i!=2){
-            if(_kbhit()) break;
+            if(getch() != ERR) break;
             refresh();
             move(xyz[_pos[pos]][0][i],xyz[_pos[pos]][1][j]);
-          if(_kbhit()) break;
+          if(getch() != ERR) break;
             refresh();
-            napms(35);
+            napms(47);
           }
           if(pos==1 && i==j && i==2){
-            if(_kbhit()) break;
+            if(getch() != ERR) break;
             refresh();
             move(xyz[_pos[pos]][0][i-2],xyz[_pos[pos]][1][j]);
-          if(_kbhit()) break;
+          if(getch() != ERR) break;
             refresh();
-            napms(35);
+            napms(47);
           }
           if(pos ==2 && 2-i==j && i!=2){
-            if(_kbhit()) break;
+            if(getch() != ERR) break;
             int ii=2-i,jj=2-j;
             move(xyz[_pos[pos]][0][ii],xyz[_pos[pos]][1][jj]);
-          if(_kbhit()) break;
+          if(getch() != ERR) break;
             refresh();
-            napms(35);
+            napms(47);
           }
           if(pos ==2 && 2-i==j && i==2){
-            if(_kbhit()) break;
+            if(getch() != ERR) break;
             refresh();
             move(xyz[_pos[pos]][0][0],xyz[_pos[pos]][1][0]);
-          if(_kbhit()) break;
+          if(getch() != ERR) break;
             refresh();
-            napms(35);
+            napms(47);
           }
           if(pos==3 && i==j && i!=2){
-            if(_kbhit()) break;
+            if(getch() != ERR) break;
             int ii=2-i,jj=2-j;
             refresh();
             move(xyz[_pos[pos]][0][ii],xyz[_pos[pos]][1][jj]);
-          if(_kbhit()) break;
+          if(getch() != ERR) break;
             refresh();
-            napms(35);
+            napms(47);
           }
         }
       }
-      if(_kbhit()) break;
+      if(getch() != ERR) break;
       pos++;
     }
     refresh();
     move(xyz[3][0][2],xyz[3][1][0]);
-    if(_kbhit()) break;
+    if(getch() != ERR) break;
     refresh();
-    napms(35);
-    if(_kbhit()) break;
+    napms(47);
+    if(getch() != ERR) break;
     move(xyz[0][0][0],xyz[0][1][2]);
     refresh();
-    if(_kbhit()) break;
-    napms(35);
-    if(_kbhit()) break;
+    if(getch() != ERR) break;
+    napms(47);
+    if(getch() != ERR) break;
   }
   char a=getch();
   fflush(stdin);
