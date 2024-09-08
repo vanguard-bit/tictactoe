@@ -1,3 +1,8 @@
+![Screenshot 2024-09-08 234924](https://github.com/user-attachments/assets/daef0a02-444f-461b-839e-90d0c5c856b8)
+![Screenshot 2024-09-08 235042](https://github.com/user-attachments/assets/828bd9b7-b16f-4169-96be-a9d9edaee814)
+![Screenshot 2024-09-08 235030](https://github.com/user-attachments/assets/3610e1ee-722a-4ea6-87da-3e6bc9f4669c)
+![Screenshot 2024-09-08 234951](https://github.com/user-attachments/assets/e76acc1a-1071-45eb-8b46-ee3cfac586b6)
+![Screenshot 2024-09-08 234931](https://github.com/user-attachments/assets/3b6ef1fe-00cb-4f02-b6fc-df00017a2ea3)
 # **Tic-Tac-Toe**
 
 This repo contains a the classic Tic-Tac-Toe gmae on terminal, written in C. 
@@ -55,3 +60,22 @@ Add one more option `-DNCURSES_STATIC` if there is an error.
 
 -Add a feature to let user change the max rows and columns, so to fit their screen perfectly
 
+## Background
+It all started when my friend and I were bored in class.
+
+So we started playing tictactoe, but soon got bored of that too...
+So i suggested why not just utilize our time and program a tictactoe game instead...(my friend looked at me funnily...that aside) that first thing he did was to ask
+chatgpt how to program the game (yes chatgpt)....
+
+Maybe if chatgpt had done a decent job of designing the game i would have not come down this rabbit hole of overengineered game....
+Instead it gave a game that where player needs to enter the co-ordinates of the grid like 1, 1 (second row, second coloumn)...yes it was 0 indexed on user side...
+This itself says lot about the output
+
+So i took it upon myself to create this....and it was even my first big scale project....and so there may be some unwise design choice...or not the best practice..
+I Apologize for that.
+
+But well this was a good experience for the days ahead...This helped me deeply understand C but still I can't say I have mastered it... especially where I was strugling to install ncurses on windows
+(windows really is not for programing) I think i almost spent four hours doing it...Thankfully I saw the above mentioned post (btw answered by C guru) and didn't waste time figuring out what is wrong
+with the lib...
+
+**Even though with all of this C is and always be the programing language ever.**
