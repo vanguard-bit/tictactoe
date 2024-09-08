@@ -1,5 +1,6 @@
 #pragma once
-#include "ncurses/include/ncursesw/ncurses.h"
+#include "ncursesw/ncurses.h"
+// #include <ncurses> //linux env
 void print_turn(char turn, int key){
   int x,y;
   getyx(stdscr, y, x);

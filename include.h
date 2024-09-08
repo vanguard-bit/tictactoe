@@ -2,7 +2,10 @@
 #include <stdio.h>
 // #include <conio.h>
 #include <stdlib.h>
-#include "ncurses/include/ncursesw/ncurses.h"
+#include "ncursesw/ncurses.h"
+
+// #include <ncurses> //linux env
+
 #define  GRID_LENTH 11
 #define  GRID_WIDTH 17
 #define  TOTAL_GRID_LENGHT 41 
