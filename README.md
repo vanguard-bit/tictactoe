@@ -23,7 +23,7 @@ Recommeded to use gcc complier. Not tested on other compilers.
 ### First install the ncurses library.
 
 For linux users intsallation is fairly simple. Use your package manager to install ncurses library. For example:
-`sudo apt install ncurses`
+`sudo apt install lib32ncursesw5`
 Note: package name may vary for different package managers.
 
 For windows users this is a bit tricky.
@@ -37,6 +37,8 @@ Note `#include` ncurses for windows and linux are diffrent.
 ### Clone this repo
 Change directory into the cloned repo
 Compile all the files in the repo and dont forget to add `-lncurses` option in case of linux envand `-lncursesw` in case of windows.
+This is what i use
+`gcc main.c animation.h game_grid.h include.h menu.h message.h movement.h player_turn.h score_table.h -lncursesw -o a.exe`
 
 ### Execute the compiled program.
 
@@ -67,11 +69,11 @@ So we started playing tictactoe, but soon got bored of that too...
 So i suggested why not just utilize our time and program a tictactoe game instead...(my friend looked at me funnily...that aside) that first thing he did was to ask
 chatgpt how to program the game (yes chatgpt)....
 
-Maybe if chatgpt had done a decent job of designing the game i would have not come down this rabbit hole of overengineered game....
+Maybe if chatgpt had done a decent job of designing the game I would have not come down this rabbit hole of overengineered game....
 Instead it gave a game that where player needs to enter the co-ordinates of the grid like 1, 1 (second row, second coloumn)...yes it was 0 indexed on user side...
 This itself says lot about the output
 
-So i took it upon myself to create this....and it was even my first big scale project....and so there may be some unwise design choice...or not the best practice..
+So i took it upon myself to create this....and it was even my first relatively big scale project....and so there may be some unwise design choice...or not the best practice..
 I Apologize for that.
 
 But well this was a good experience for the days ahead...This helped me deeply understand C but still I can't say I have mastered it... especially where I was strugling to install ncurses on windows
