@@ -1,6 +1,5 @@
 #pragma once
-#include "ncurses/include/ncursesw/ncurses.h"
-// #include <ncurses> // linux env
+#include <ncursesw/ncurses.h>
 
 void disp(int input, int xx, int yy,int xyz[5][2][3],int pos){
   if((input==KEY_LEFT ||input=='a' ||input=='h'||input=='A' ||input=='H') && (xx>xyz[pos][1][0] || xx==xyz[pos][1][0])){

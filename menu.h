@@ -1,6 +1,5 @@
 #pragma once
-#include "ncursesw/ncurses.h"
-// #include <ncurses.h> //linux env
+#include <ncursesw/ncurses.h>
 void create_menu(chtype box[3][5]){
   for(int i=0;i<3;i++){
       for(int j=0;j<5;j++){
