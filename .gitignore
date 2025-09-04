@@ -1,3 +1,7 @@
-*.exe
-*.gch
+.git
+.gitignore
+compile_commands.json
+game
+.cache
+.o
 

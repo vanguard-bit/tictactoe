@@ -56,11 +56,13 @@ Add one more option `-DNCURSES_STATIC` if there is an error.
 -Original version had a dependency of `conio.h` a DOS header file. So not compitable with linux systems. So the intro animaation is erratic.(Anyone any idea to solve this?)
 
 ## TODO
--Add a cmake file
+-Add a cmake file - DONE
 
 -Restrict user from resizing screen
 
 -Add a feature to let user change the max rows and columns, so to fit their screen perfectly
+
+-Update README.md to match recent commit.
 
 ## Background
 It all started when my friend and I were bored in class.
